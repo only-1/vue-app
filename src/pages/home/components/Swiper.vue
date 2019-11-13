@@ -21,7 +21,7 @@
         },
         swiperList:[
           {id:'0001',
-          imgUrl:00
+          imgUrl:'https://img1.qunarzz.com/order/comp/1805/2e/6e407f088bfb902.png'
 
           }
         ]
