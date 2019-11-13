@@ -7,6 +7,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component:()=>import('@/pages/home/Home')
+    },
+    {
+      path: '/city',
+      name: 'city',
+      component:()=>import('@/pages/city/City')
     }
   ]
 })
