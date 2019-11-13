@@ -79,6 +79,7 @@ export default{
 }
 </script>
 <style  lang="stylus" scoped>
+    @import '~styles/mixins.styl'
     .icons>>>.swiper-container
       height:0
       padding-bottom:50%
