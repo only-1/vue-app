@@ -2,7 +2,7 @@
 <div>
     <div class="recommend-title">周末去哪</div>
     <ul>
-        <li class="item border-bottom" v-for="item in WeekendList" :key="item.id">
+        <li class="item border-bottom" v-for="item in weed" :key="item.id">
             <div class="item-img-wrapper">
                 <img :src="item.imgUrl" class="item-img">
             </div>
@@ -21,28 +21,12 @@
 <script>
 export default{
     name:'weekend',
+    props:{
+        weed:Array
+    },
     data(){
         return{
-            WeekendList:[
-                {
-                    id:'001',
-                    title:'大连圣木管',
-                    desc:'快来看快来看啊啊啊啊啊',
-                    imgUrl:'//imgs.qunarzz.com/vs_ceph_vs_tts/a2ba98f7-a7dc-4b86-be43-2802a1206879.jpg_r_480x320x90_3e4dbe86.jpg'
-                },
-                {
-                    id:'002',
-                    title:'日本',
-                    desc:'我想去哈哈',
-                    imgUrl:'//imgs.qunarzz.com/vs_ceph_vs_tts/a2ba98f7-a7dc-4b86-be43-2802a1206879.jpg_r_480x320x90_3e4dbe86.jpg'
-                },
-                {
-                    id:'003',
-                    title:'法国',
-                    desc:'我想去哈哈',
-                    imgUrl:'//imgs.qunarzz.com/vs_ceph_vs_tts/a2ba98f7-a7dc-4b86-be43-2802a1206879.jpg_r_480x320x90_3e4dbe86.jpg'
-                }
-            ]
+
         }
     }
 }

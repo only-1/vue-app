@@ -2,7 +2,7 @@
 <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item in recom" :key="item.id">
             <img :src="item.imgUrl" class="item-img">
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p> 
@@ -19,28 +19,12 @@
 <script>
 export default{
     name:'recommend',
+    props:{
+        recom:Array
+    },
     data(){
         return{
-            recommendList:[
-                {
-                    id:'001',
-                    title:'大连圣木管',
-                    desc:'快来看快来看啊啊啊啊啊',
-                    imgUrl:'//imgs.qunarzz.com/vs_ceph_vs_tts/033f6526-1db0-40c7-93c4-ba3572c04b4f.jpg_r_480x320x90_df159252.jpg'
-                },
-                {
-                    id:'002',
-                    title:'日本',
-                    desc:'我想去哈哈',
-                    imgUrl:'//imgs.qunarzz.com/vs_ceph_vs_tts/033f6526-1db0-40c7-93c4-ba3572c04b4f.jpg_r_480x320x90_df159252.jpg'
-                },
-                {
-                    id:'003',
-                    title:'法国',
-                    desc:'我想去哈哈',
-                    imgUrl:'//imgs.qunarzz.com/vs_ceph_vs_tts/033f6526-1db0-40c7-93c4-ba3572c04b4f.jpg_r_480x320x90_df159252.jpg'
-                }
-            ]
+            
         }
     }
 }
