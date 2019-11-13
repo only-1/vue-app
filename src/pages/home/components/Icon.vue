@@ -83,7 +83,6 @@ export default{
     .icons>>>.swiper-container
       height:0
       padding-bottom:50%
-      background:red
     .icon
        position:relative
        width:25%
@@ -98,9 +97,9 @@ export default{
          bottom:.44rem
          box-sizing:border-box
          padding:.1rem
-         .icon-img-content
-           display:block
-           margin:0 auto
+         .con-img-content
+            display:block
+            margin:0 auto
         .icon-desc
            position:absolute
            left:0;
