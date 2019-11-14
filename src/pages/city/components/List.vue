@@ -79,6 +79,7 @@ export default {
   left:0
   bottom:0
   right:0
+  overflow: hidden
   .title
     height 0.44rem
     line-height 0.44rem

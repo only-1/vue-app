@@ -14,7 +14,7 @@ export default {
 .search
   height 0.72rem
   padding:0 .1rem
-  background:red
+  background:#00bcd4
   .city-search
     height 0.62rem
     line-height .62rem
