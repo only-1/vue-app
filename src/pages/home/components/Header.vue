@@ -3,16 +3,14 @@
         <div class="header-left"><span class="iconfont">&#xe624</span></div>
         <div class="header-input" placeholder="请输入城市景点"><span class="iconfont">&#xe632</span>请输入城市景点</div>
         <router-link to="/city">
-          <div class="header-right">{{this.city}}<span class="iconfont">&#xe64a</span></div>
+          <div class="header-right">{{this.$store.state.city}}<span class="iconfont">&#xe64a</span></div>
         </router-link>
     </div>
 </template>
 <script>
     export default{
-        name:'HomeHeader',
-        props:{
-          city:String
-        }
+        name:'HomeHeader'
+       
     }
 </script>
 <style lang ="stylus" scoped>

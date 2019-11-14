@@ -4,9 +4,9 @@
     <input type="text" placeholder="输入城市名或拼音" class="city-search" 
     v-model="keyword">
   </div>
-  <div class="search-content" ref="search" v-show="keyword">
+  <div class="search-content" ref="sear" v-show="keyword">
     <ul >
-      <li v-for="item in list" class="search-item" :key="item.id">{{item.name}}</li>
+      <li v-for="item in list" class="search-item" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
      <li  class="search-item" v-show="!list.length">没有找到匹配数据</li> 
     </ul> 
   </div>
@@ -44,12 +44,18 @@ export default {
              }
             })
           }
-         this.list = result
+         this.list=result
         },100)
     }
   },
   mounted(){
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.sear)
+  },
+  methods:{
+      handleCityClick(city){
+           this.$store.dispatch('changeCity',city)
+           this.$router.push('/')
+      }
   }
 }
 </script>
