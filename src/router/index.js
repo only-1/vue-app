@@ -12,6 +12,11 @@ export default new Router({
       path: '/city',
       name: 'city',
       component:()=>import('@/pages/city/City')
+    },
+    {
+      path: '/detail/:id',
+      name: 'detail',
+      component:()=>import('@/pages/detail/Detail')
     }
   ]
 })
