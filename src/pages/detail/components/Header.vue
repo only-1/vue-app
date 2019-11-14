@@ -1,17 +1,23 @@
 <template>
-  <div class="banner">
-    <img class="banner-img"
-    src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" alt="">
-     <div class="banner-info">
-       <div class="banner-title">大连圣地</div>
-       <div class="banner-number">39</div>
-     </div>
-
+<div>
+    <div class="banner">
+      <img class="banner-img"
+      src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" alt="">
+       <div class="banner-info">
+         <div class="banner-title">大连圣地</div>
+         <div class="banner-number">39</div>
+       </div>
+    </div>
+  <common-Gallary></common-Gallary>
   </div>
 </template>
 <script>
+import commonGallary from '@/common/gallary/Gallary'
 export default {
-  name:'Detail-Header'
+  name:'Detail-Header',
+  components:{
+    commonGallary
+  }
 }
 </script>
 <style lang="stylus" scoped>
