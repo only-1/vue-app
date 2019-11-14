@@ -2,16 +2,16 @@
 <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-        
-           <router-link :to="'/detail/'+ item.id" tag="li">
-           class="item border-bottom" v-for="item in recom" :key="item.id">
+
+           <router-link :to="'/detail/'+ item.id" tag="li" v-for="item in recom"
+           :key="item.id" class="item border-bottom">
                <img :src="item.imgUrl" class="item-img">
                <div class="item-info">
-                   <p class="item-title">{{item.title}}</p> 
+                   <p class="item-title">{{item.title}}</p>
                    <p class="item-desc">{{item.desc}}</p>
                    <button class="item-button">查看详情</button>
-               </div>   
-       
+               </div>
+
         </router-link>
     </ul>
 </div>
@@ -26,7 +26,7 @@ export default{
     },
     data(){
         return{
-            
+
         }
     }
 }
