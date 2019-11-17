@@ -2,28 +2,37 @@
 <div>
     <div class="banner" @click="handleBanner">
       <img class="banner-img"
-      src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" alt="">
+      :src=bannerImg>
        <div class="banner-info">
-         <div class="banner-title">大连圣地</div>
-         <div class="banner-number">39</div>
+         <div class="banner-title">{{this.sightName}}</div>
+         <div class="banner-number">{{this.bannerImg.length}}</div>
        </div>
     </div>
-  <common-Gallary :imgs="imgs" @close="handlecommon"
-  v-show="showGallary"></common-Gallary>
+     <fade-animation>
+        <common-Gallary :imgs = "gallaryImgs" @close="handlecommon"
+        v-show="showGallary"></common-Gallary>
+  </fade-animation>
   </div>
 </template>
 <script>
 import commonGallary from '@/common/gallary/Gallary'
+import FadeAnimation from '@/common/fade/Fade'
 export default {
-  name:'Detail-banner',
+  name:'DetailBanner',
+  props:{
+    bannerImg:String,
+    gallaryImgs:Array,
+    sightName:String
+  },
   data(){
     return{
-      img:['http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg'],
       showGallary:false
+
     }
   },
   components:{
-    commonGallary
+    commonGallary,
+    FadeAnimation
   },
   methods:{
     handleBanner(){

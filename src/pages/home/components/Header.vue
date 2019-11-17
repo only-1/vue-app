@@ -10,10 +10,9 @@
 <script>
     export default{
         name:'HomeHeader'
-       
     }
 </script>
-<style lang ="stylus" scoped>
+<style lang="stylus" scoped>
     @import '~styles/varibles.styl'
     .header
        height:$headerHeight
@@ -39,6 +38,4 @@
          line-height:.64rem
          margin-left:.2rem
          color:#ccc
-
-
 </style>

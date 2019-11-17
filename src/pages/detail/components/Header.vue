@@ -68,6 +68,7 @@ export default {
   line-height:$headerHeight
   text-align:center
   color:#fff
+  z-index:2
   background:$bgColor
   font-size:.32rem
   .header-left

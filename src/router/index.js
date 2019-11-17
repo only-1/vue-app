@@ -10,13 +10,16 @@ export default new Router({
     },
     {
       path: '/city',
-      name: 'city',
+      name: 'City',
       component:()=>import('@/pages/city/City')
     },
     {
       path:'/detail/:id',
-      name:'detail',
+      name:'Detail',
       component:()=>import('@/pages/detail/Detail')
     }
-  ]
+  ],
+  scrollBehavior(to,from,savedPosition){
+    return{x:0,y:0}
+  }
 })

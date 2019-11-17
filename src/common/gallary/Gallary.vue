@@ -3,8 +3,8 @@
       <div class="wrapper">
           <swiper :options="swiperOptions">
       <!-- slides -->
-              <swiper-slide v-for="(item,index) in img" :key="index">
-                <img class="swiper-img" :src="item.img" />
+              <swiper-slide v-for="(item,index) in imgs" :key="index">
+                <img class="swiper-img" :src="item" />
               </swiper-slide>
               <!-- Optional controls -->
               <div class="swiper-pagination" slot="pagination"></div>
@@ -14,13 +14,10 @@
 </template>
 <script>
 export default {
-  name:'gallary',
+  name:'Gallary',
   props:{
     imgs:{
-      type:Array,
-      default(){
-        return []
-      }
+      type:Array
     }
   },
   data(){
